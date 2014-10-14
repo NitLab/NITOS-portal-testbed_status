@@ -1,0 +1,101 @@
+<!-- Author	Chrysostomos Chatzigeorgiou
+ 	 E-mail	hrhatzig@gmail.com -->
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Dialog</title>
+		<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	</head>
+
+	<body>
+		<div class="Paragraph">
+			<%= link_to image_tag("https://omf.mytestbed.net/attachments/886/Logo-NitLab-S-2.png", alt: "NITLAB"), 'http://nitlab.inf.uth.gr/NITlab/' %>
+			<br><h2>Testbed Status</h2>
+			<p><b>Testbed Status</b> is a framework that allows users to view the operational status of the testbed. If a node is malfunctional, an exclamation mark is placed on it.<br> In addition, the users are able to observe the hardware specifications of the nodes, as well as the MAC addresses of their network interfaces.</h6>
+		</div>
+		<div class="Building">
+			<a><%= image_tag("Picture7.png", alt: "Building", height: "900", width: "700") %></a>
+		</div>
+		
+		<div class="Nodes">
+			<% @ans.each do |a| %>
+				<%node_id = a["id"]%>
+				<%if a["ping"] == '0' || a["cmc_status"] == '0' || a["image_load"] == '0'%>
+					<div class="node_icon Node<%=node_id%>" id="node_id<%=node_id%>">
+						<input id="opener<%=node_id%>" type="image" src="http://nitlab.inf.uth.gr/NITlab/info_tool/notification.png" onMouseOver="this.src='http://nitlab.inf.uth.gr/NITlab/info_tool/notification.png'" height="42" width="42">
+					</div>
+				<%else%>
+					<div class="node_icon Node<%=node_id%>" id="node_id<%=node_id%>">
+						<input id="opener<%=node_id%>" type="image" src="/images/Node_ball<%=node_id%>.fw.png" onMouseOver="this.src='/images/Node_ball<%=node_id%>.fw.png'" height="40" width="40">
+					</div>
+				<%end%>
+
+				<div class="opener" data-dialogSelector="#dialog<%=node_id%>">
+	    			<div id="dialog<%=node_id%>" >
+							<div class="opener"  style="position: absolute; display: block; visibility: visible; border: 5px groove green; padding: 8px; width: 250px; overflow: auto; height: 220px; background-color: white; top=200 left=200" onClick="window.close()">
+								<center><b>Node <%=node_id%> specs</b></center>
+				  				<b>CPU:</b> <%=a["CPU"] %> <br/>
+								<b>Cores:</b> <%=a["cores"] %> <br/>
+								<b>Threads:</b> <%=a["threads"] %> <br/>
+								<b>L1:</b> <%=a["L1_KB"] %> <br/> 
+								<b>L2:</b> <%=a["L2_MB"] %> <br/>
+								------------------------------------------------<br/>
+								<b>RAM:</b> <%=a["RAM_GB"] %> <br/>
+								<b>RAM type:</b> <%=a["RAM_type"] %> <br/>
+								------------------------------------------------<br/>
+								<b>GPU:</b> <%=a["GPU"] %> <br/>
+								------------------------------------------------<br/>
+								<b>Hard Disk:</b> <%=a["Disk_GB"] %> <br/>
+								------------------------------------------------<br/>
+								<b>eth0 MAC:</b> <%=a["MAC_eth0"] %> <br/>
+								------------------------------------------------<br/>
+								<b>eth1 MAC:</b> <%=a["MAC_eth1"] %> <br/>
+								------------------------------------------------<br/>
+								<b>Network card:</b> <%=a["Network"] %> <br/>
+								------------------------------------------------<br/>
+								<b>Network card's MAC:</b> <%=a["CPU"] %> <br/>
+								------------------------------------------------<br/>
+								<b>MIMO card:</b> <%=a["MIMO_card"] %> <br/>
+								------------------------------------------------<br/>
+								<b>MIMO card's MAC:</b>
+				  			</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="Images">
+			<img src="/images/Red_Ball.fw.png" alt="Red" width="37" height="37">  <b>Red</b> dots represent <b>Grid Nodes</b><br><br>
+			<img src="/images/Orange_Ball.fw.png" alt="Orange" width="37" height="37">  <b>Orange</b> dots represent <b>Diskless Nodes</b><br><br>
+			<img src="/images/Yellow_Ball.fw.png" alt="Yellow" width="37" height="37">  <b>Yellow</b> dots represent <b>Orbit Nodes</b><br><br>
+			<img src="http://nitlab.inf.uth.gr/NITlab/info_tool/notification.png" alt="Not" width="42" height="42">  <b> Nodes under maintainance</b><br><br>
+		</div>
+		<!-- <div class="bottum"> -->
+		<div class="UTH">
+			<a href="http://www.uth.gr/en/index.php" target="_blank" title="University of Thessaly">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/uth-banner2.png" alt="University of Thessaly" align="right" /></a>	
+			<div class="clr"></div>
+		</div>
+
+		<div class="OneLab">
+			<a href="http://www.onelab.eu/" target="_blank" title="OneLab - FUTURE INTERNET TESTBEDS">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/onelab-banner2.png" alt="OneLab - FUTURE INTERNET TESTBEDS" align="left" </a>
+			<div class="clr"></div>	
+		</div>
+
+		<div class="Certh">
+			<a href="http://www.certh.gr/root.en.aspx" target="_blank" title="CERTH - The Centre for Research and Technology Hellas">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/certh_banner2.png" alt="CERTH - The Centre for Research and Technology Hellas" align="middle" /></a>
+			<div class="clr"></div>
+		</div>
+
+		<div class="Copyright">
+			<p align="center">&copy Copyright 2014, Chrysostomos Chatzigeorgiou<br> All Rights Reserved</p>
+			<a href="http://nitlab.inf.uth.gr/NITlab/" target="_blank" title="NITlab TEAM"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NITlab TEAM</b></a>
+		</div>
+		<!-- </div> -->
+		
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+  		<meta charset="utf-8">
+  		<link rel="icon" type="image/png" href="http://nitlab.inf.uth.gr/NITlab/templates/rt_solarsentinel/favicon.ico">
+	  <title>Testbed Status</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	  
+	  <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+	</head>
+	<body>
+	    <header class="navbar navbar-fixed-top navbar-inverse">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <nav>
+	            <ul class="nav pull-right">
+	              <li><%= link_to "Home",    '#' %></li>
+	              <li><%= link_to "Testbed",    '#' %></li>
+	              <li><%= link_to "Hardware", '#' %></li>
+	              <li><%= link_to "Testbed Tools", '#' %></li>
+	              <li><%= link_to "Demos", '#' %></li>
+	              <li><%= link_to "Projects", '#' %></li>
+	              <li><%= link_to "News", '#' %></li>
+	              <li><%= link_to "Repository", '#' %></li>
+	              <li><%= link_to "Contact us", '#' %></li>
+	            </ul>
+	          </nav>
+	        </div>
+	      </div>
+	    </header>
+	    <section class="container">
+	      <%= yield %>
+	      <!-- <div class="UTH">
+			<a href="http://www.uth.gr/en/index.php" target="_blank" title="University of Thessaly">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/uth-banner2.png" alt="University of Thessaly" align="right" /></a>	
+			<div class="clr"></div>
+		</div>
+
+		<div class="OneLab">
+			<a href="http://www.onelab.eu/" target="_blank" title="OneLab - FUTURE INTERNET TESTBEDS">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/onelab-banner2.png" alt="OneLab - FUTURE INTERNET TESTBEDS" align="left" </a>
+			<div class="clr"></div>	
+		</div>
+
+		<div class="Certh">
+			<a href="http://www.certh.gr/root.en.aspx" target="_blank" title="CERTH - The Centre for Research and Technology Hellas">
+			<img src="http://nitlab.inf.uth.gr/NITlab/images/banners/certh_banner2.png" alt="CERTH - The Centre for Research and Technology Hellas" align="middle" /></a>
+			<div class="clr"></div>
+		</div>
+
+		<div class="Copyright">
+			<p align="center">&copy Copyright 2014, Chrysostomos Chatzigeorgiou<br> All Rights Reserved</p>
+			<a href="http://nitlab.inf.uth.gr/NITlab/" target="_blank" title="NITlab TEAM"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NITlab TEAM</b></a>
+		</div> -->
+	    </section>
+	</body>
+</html>

@@ -1,0 +1,310 @@
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: url(http://nitlab.inf.uth.gr/NITlab/templates/rt_solarsentinel/images/header/blue/header-bg.png) 0 33px repeat-x;
+  padding-top: 42px;
+} 
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+/*section {
+  margin-top: 55em;
+  font-size: 120%;
+  padding: 60px;
+  background: url(http://nitlab.inf.uth.gr/NITlab/templates/rt_solarsentinel/images/header/blue/header-bg.png) 0 0 repeat-x;
+}*/
+.Images {
+  position:absolute;
+  top:400px;
+  left:1000px;
+}
+
+.Paragraph{
+  position:absolute;
+  top:40px;
+  left:200px;
+}
+
+.Copyright {
+  color: #0000FF;
+  /*color: #fff;*/
+  position:absolute;
+  top:1150px;
+  left:530px;
+}
+
+.UTH{
+  position:absolute;
+  top:1000px;
+  left:150px;
+}
+.Certh{
+  position:absolute;
+  top:1000px;
+  left: 550px; 
+  /*left:500px;*/
+}
+.OneLab{
+ position:absolute;
+  top:1000px;
+  left: 950px;
+  /*left:850px; */
+}
+.Building {
+  position:absolute;
+  left:200px;
+  top:300px;
+}
+.Nodes{
+  position:absolute;
+  left:-5px;
+  top:110px;
+}
+/*node 19*/
+
+.Node19 {
+  position:absolute;
+  left:375px;
+  top:235px;
+
+}
+.Node18 {
+  position:absolute;
+  left:350px;
+  top:285px;
+}
+.Node17 {
+  position:absolute;
+  left:325px;
+  top:335px;
+}
+.Node16 {
+  position:absolute;
+  left:300px;
+  top:385px;
+}
+.Node23 {
+  position: absolute;
+  left: 450px; 
+  top: 250px;
+}
+.Node22 {
+  position: absolute;
+  left: 425px; 
+  top: 300px;
+}
+.Node21 {
+  position: absolute;
+  left: 400px; 
+  top: 350px;
+}
+.Node20 {
+  position: absolute;
+  left: 375px; 
+  top: 400px;
+}
+.Node27 {
+  position: absolute;
+  left: 525px; 
+  top: 265px;
+}
+.Node26 {
+  position: absolute;
+  left: 500px; 
+  top: 315px;
+}
+.Node25 {
+  position: absolute;
+  left: 475px; 
+  top: 365px;
+}
+.Node24 {
+  position: absolute;
+  left: 450px; 
+  top: 415px;
+}
+.Node31 {
+  position: absolute;
+  left: 600px; 
+  top: 280px;
+}
+.Node30 {
+  position: absolute;
+  left: 575px; 
+  top: 330px;
+}
+.Node29 {
+  position: absolute;
+  left: 550px; 
+  top: 380px;
+}
+.Node28 {
+  position: absolute;
+  left: 525px; 
+  top: 430px;
+}/*node 28*/
+
+/* arxh staurou--node 34 */
+.Node34 {
+  position: absolute;
+  left: 660px; 
+  top: 345px;
+}
+.Node32 {
+  position: absolute;
+  left: 630px; 
+  top: 420px;
+}
+.Node35 {
+  position: absolute;
+  left: 605px; 
+  top: 370px;
+}
+.Node33 {
+  position: absolute;
+  left: 685px; 
+  top: 395px;
+}/* telos staurou--node 33 */
+/*node 8*/
+.Node8 {
+  position: absolute;
+  left: 665px; 
+  top: 480px;
+}
+/* node 5 */
+.Node5 {
+  position:absolute;
+  left:250px;
+  top:385px;
+}
+/* node 2 */
+.Node2 {
+  position:absolute;
+  left:285px;
+  top:290px;
+}
+/* node 6 */
+.Node6 {
+  position:absolute;
+  left:335px;
+  top:200px;
+}
+/* node 11 */
+.Node11 {
+  position: absolute;
+  left: 775px; 
+  top: 500px;
+}
+/* node 12 */
+.Node12 {
+  position: absolute;
+  left: 770px; 
+  top: 300px;
+}
+/* node 13 */
+.Node13 {
+  position: absolute;
+  left: 850px; 
+  top: 380px;
+}
+/* node 3 */
+.Node3 {
+  position: absolute;
+  left: 770px; 
+  top: 620px;
+}
+/* node 7 */
+.Node7 {
+  position: absolute;
+  left: 640px; 
+  top: 590px;
+}
+/* node 9 */
+.Node9 {
+  position: absolute;
+  left: 530px; 
+  top: 565px;
+}
+/* node 4 */
+.Node4 {
+  position: absolute;
+  left: 400px; 
+  top: 535px;
+}
+/* node 10 */
+.Node10 {
+  position: absolute;
+  left: 350px; 
+  top: 475px;
+}
+/* node 1 */
+.Node1 {
+  position: absolute;
+  left: 450px; 
+  top: 500px;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+   
+}
+
+h2 {
+  color: #ff6600;
+  font-size: 2.0em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
